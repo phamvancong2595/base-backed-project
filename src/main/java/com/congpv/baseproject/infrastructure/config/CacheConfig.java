@@ -6,7 +6,7 @@ import io.lettuce.core.RedisChannelWriter;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 import org.springframework.cache.CacheManager;
-import org.springframework.cache.annotation.CachingConfigurer;
+
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +20,7 @@ import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSeriali
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 
 @Configuration
-public class CacheConfig extends CachingConfigurerSupport implements CachingConfigurer {
+public class CacheConfig extends CachingConfigurerSupport {
 
   private final int CACHE_REDIS_TTL = 60;
   private final int CACHE_LOCAL_TTL = 120;

@@ -47,7 +47,7 @@ public class RestExceptionHandler {
   @ExceptionHandler(value = PostNotFoundException.class)
   public ResponseEntity<PostResponse> handlePostNotFoundException() {
     return new ResponseEntity<>(
-        PostResponse.builder().message(MSG_PRODUCT_NOT_FOUND).success(false).build(),
+        PostResponse.builder().message(MSG_POST_NOT_FOUND).success(false).build(),
         HttpStatus.NOT_FOUND
     );
   }
